@@ -5,14 +5,14 @@
  * convert_binary_to_uint - Converts a binary number to an unsigned int.
  * @binary_str: Pointer to a string of 0 and 1 chars.
  *
- * Return: The converted number, or 0 if there is an invalid char or if binary_str is NULL.
+ * Return: The converted number, 0 if there is an invalid char or if binary_str is NULL.
  */
 unsigned int convert_binary_to_uint(const char *binary_str)
 {
 	if (binary_str == NULL)
-		return 0;
+		return (0);
 
-	unsigned int result = 0;
+	unsigned int result = (0);
 
 	while (*binary_str != '\0')
 	{
@@ -23,7 +23,7 @@ unsigned int convert_binary_to_uint(const char *binary_str)
 		else
 		{
 			/* Invalid character encountered */
-			return 0;
+			return (0);
 		}
 		binary_str++;
 	}
@@ -39,5 +39,5 @@ int main(void)
 	printf("Binary: %s\n", binary_data);
 	printf("Converted Value: %u\n", converted_value);
 
-	return 0;
+	return (0);
 }
